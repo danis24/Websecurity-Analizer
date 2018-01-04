@@ -8,9 +8,7 @@ sudo: required
 addons:
   postgresql: '9.5'
 before_script:
-- psql -c 'create database websecurity_analizer_development;' -U postgres
 - psql -c 'create database websecurity_analizer_test;' -U postgres
-- psql -c 'create database websecurity_analizer_production;' -U postgres
 - bundle exec rails db:migrate
 script:
 - bundle exec rails ci:tests

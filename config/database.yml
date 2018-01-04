@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: websecurity_analizer_development
+  database: web_security_analizer
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -71,15 +71,16 @@ test:
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
-  DATABASE_URL="postgres://quxonnpqgaknkf:b74ea674ee39ab8cf6293841cfeadfb8155fbcdacb658a9f13b29216cf265a06@ec2-54-225-255-132.compute-1.amazonaws.com:5432/dem03mhrge8g0p"
+# DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
 #
-  production:
-    url: <%= ENV['DATABASE_URL'] %>
-#
 # production:
-#   <<: *default
-#   database: dem03mhrge8g0p
-#   username: quxonnpqgaknkf
-#   password: <%= ENV['WEBSECURITY-ANALIZER_DATABASE_PASSWORD'] %>
+#     url: <%= ENV['DATABASE_URL'] %>
+#
+production:
+  host: ec2-54-225-255-132.compute-1.amazonaws.com
+  database: dem03mhrge8g0p
+  post: 5432
+  username: quxonnpqgaknkf
+  password: b74ea674ee39ab8cf6293841cfeadfb8155fbcdacb658a9f13b29216cf265a06

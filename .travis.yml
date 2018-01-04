@@ -1,0 +1,20 @@
+language: ruby
+rvm:
+- 2.3.1
+cache:
+- bundler
+- apt
+sudo: required
+addons:
+  postgresql: '9.5'
+before_script:
+- pssql -C 'create database websecurity-analizer_test;' -U websecurity-analizer
+- bundle exec rails db:migrate
+script:
+- bundle exec rails ci:tests
+deploy:
+  provider: heroku
+  api_key:
+    secure: pD3hffdKQdTFh3wdK20Vp9rw7kFutDoXbvFvrOg20X2ifIjY3WQfFPvvmZpHPWVoUg9V8PIcBho4YlvvyFhityiD+ReNaqNiQ+pKpMdYkdccsf/MHzo2GasoQ3dGyxikmJfIBnN0RA41NZTRNK4dl7ClNv9MVhNnB2Ly3KeydiBdRZf5J59b87GATy3GAWWRsrKSWLmReoogYp9KWvJW3Qow4QelO1cn8PdPZJAuyQFA7kDXjlbjXKxHjGTsu9ndSsY3buNIbzO2TI+BR0/T7GIEEyIS+4ZUnaX4ejnwNtkBzSdjkYBntkWAtDZ1RO65KjLeoKX8oBkagVxU48M4eU2PldKdi837bUsY1bd2tiqiBXacNKYU7jQ9S15HWbHKZPGT+QX+5JFv3USiqHX6EiimhBMQN/K4diLuniaQOjj7z6xYpFE1Sh1tAWQPfDwZa9IP3tVQcsPRT1wMouMlBEY5RuZIZnXE2HdSUCJzG/KFSUVuJ3OWfjuhyGUJSuoTM6o5tnKOH421SYD93UN3ifiyEoUSCM8xTjdafPOxY+3aW2rshQCtL94aU5JOxbyGnruUqoBG8w77o+AnsH4diCMB0PU8t6Xqs+ZfMdPCLGyCUoltKLc9zjh5lX0gthJxEZs+Nkpn0l/CnSJjM+DY0QOyxc1wdURslhjVhJo8mcE=
+  app:
+    master: websecurity-analizer

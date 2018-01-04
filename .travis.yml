@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.3.1
+- 2.4.3
 cache:
 - bundler
 - apt
@@ -8,10 +8,10 @@ sudo: required
 addons:
   postgresql: '9.5'
 before_script:
-- pssql -C 'create database websecurity-analizer_test;' -U websecurity-analizer
+- psql -c 'create database websecurity_analizer_test;' -U postgres
 - bundle exec rails db:migrate
-script:
-- bundle exec rails ci:tests
+# script:
+# - bundle exec rails ci:tests
 deploy:
   provider: heroku
   api_key:

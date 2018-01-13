@@ -1,0 +1,68 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Targets</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="<%= url_for :controller => 'dashboards', :action => 'dashboard_1' %>">Home</a>
+            </li>
+            <li class="active">
+                <strong>Targets</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Target For Scans</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-5 m-b-xs">
+                            <button class="btn btn-success" type="button"><i class="fa a-fw fa-dot-circle-o"></i>&nbsp;Scan</button>
+                            <button class="btn btn-primary" type="button"><i class="fa fa-plus"></i>&nbsp;Add Target</button>
+                        </div>
+                        <div class="col-sm-4 m-b-xs">
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                    <button type="button" class="btn btn-sm btn-primary"> Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Address</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                    <th>Vulnerabilities</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" checked class="i-checks" name="input[]"></td>
+                                    <td><a href="http://danistutorial.com/" target="_blank">http://danistutorial.com/</a></td>
+                                    <td>This Site scan for security reason</td>
+                                    <td>Not Scanned</td>
+                                    <td>
+                                        <a href="#"><span class="label label-danger">0</span></a>
+                                        <a href="#"><span class="label label-warning">0</span></a>
+                                        <a href="#"><span class="label label-success">0</span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

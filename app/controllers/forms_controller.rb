@@ -17,4 +17,8 @@ class FormsController < ApplicationController
   def markdown
   end
 
+  def profile
+
+  end
+
 end

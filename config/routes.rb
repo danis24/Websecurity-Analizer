@@ -2,9 +2,20 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root to: 'landing#index'
+  get '/login', to: 'pages#login_2'
+  get '/register', to: 'pages#register'
+  get '/forgot_password', to: 'pages#forgot_password'
+  get '/home', to: 'dashboards#dashboard'
+  get '/profile', to: 'forms#profile'
+  get '/targets', to: 'targets#index'
+  get '/vulnerabilities', to: 'vulnerabilities#index'
+  get '/scans', to: 'scans#index'
+  get '/reports', to: 'reports#index'
+  get '/setting', to: 'setting#index'
 
   # All routes
   get "dashboards/dashboard_1"
+  get "profiles/profile"
   get "dashboards/dashboard_2"
   get "dashboards/dashboard_3"
   get "dashboards/dashboard_4"

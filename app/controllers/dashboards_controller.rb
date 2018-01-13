@@ -2,7 +2,7 @@ class DashboardsController < ApplicationController
   def dashboard_1
   end
 
-  def dashboard_2
+  def dashboard
   end
 
   def dashboard_3

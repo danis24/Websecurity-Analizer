@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/scans', to: 'scans#index'
   get '/reports', to: 'reports#index'
   get '/setting', to: 'setting#index'
+  get '/manuals', to: 'manuals#index'
 
   # All routes
   get "dashboards/dashboard_1"

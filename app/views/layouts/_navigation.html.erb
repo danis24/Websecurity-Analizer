@@ -35,20 +35,20 @@
                 <a href="<%= url_for '/targets' %>"><i class="fa a-fw fa-dot-circle-o"></i> <span class="nav-label" data-i18n="nav.dashboard">Targets</span></a>
             </li>
 
-            <li class="<%= is_active_controller('vulnerabilities') %>">
+            <!-- <li class="<%= is_active_controller('vulnerabilities') %>">
                 <a href="<%= url_for '/vulnerabilities' %>"><i class="fa fa-fw fa-bug"></i> <span class="nav-label" data-i18n="nav.dashboard">Vulnerabilities</span></a>
             </li>
 
             <li class="<%= is_active_controller('scans') %>">
                 <a href="<%= url_for '/scans' %>"><i class="fa fa-fw fa-area-chart"></i> <span class="nav-label" data-i18n="nav.dashboard">Scans</span></a>
-            </li>
-
-            <li class="<%= is_active_controller('reports') %>">
-                <a href="<%= url_for '/reports' %>"><i class="fa fa-fw fa-file-text"></i> <span class="nav-label" data-i18n="nav.dashboard">Reports</span></a>
-            </li>
+            </li> -->
 
             <li class="<%= is_active_controller('setting') %>">
                 <a href="<%= url_for '/setting' %>"><i class="fa fa-fw fa-cog"></i> <span class="nav-label" data-i18n="nav.dashboard">Setting</span></a>
+            </li>
+
+            <li class="<%= is_active_controller('manuals') %>">
+                <a href="<%= url_for '/manuals' %>"><i class="fa fa-fw fa-file-text"></i> <span class="nav-label" data-i18n="nav.dashboard">User Manual</span></a>
             </li>
         </ul>
 
